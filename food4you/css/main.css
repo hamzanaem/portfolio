@@ -1,0 +1,976 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Montserrat:wght@400;500;700;800&display=swap');
+@font-face {
+    font-family: gabelisa;
+    src: url(../fonts/Gabelisa-Font.otf);
+ }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;    
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+body{
+    font-family: 'Montserrat', sans-serif; 
+    color: #000000;
+    font-weight: 700;
+}
+#wrapper{
+    width: 100%;
+    overflow: hidden;
+}
+.container {
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+.btn {
+    background-color: #ffe001;
+    color: #000;
+    line-height: 1;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    display: inline-block;
+    padding: 17px 40px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.btn:hover{
+    background-color: #ebe9ac;
+    color: black;
+}
+#header {                       /* --------------- header section --------------- */
+    width: 100%;
+    overflow: hidden;
+    padding: 35px 0px;
+    position: absolute;
+    top: 0;
+    z-index: 99999;
+}
+#header .container {
+    display: flex;
+    justify-content: space-between;
+}
+#header .container .logo  {
+    display: block;
+}
+#header .container .logo a {
+    display: block;
+    width: 251px; /* Set the desired width of the image */
+    height: 100%; /* Set the desired height of the image */
+    background-image: url('../images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#header .container .nav-top {
+    padding: 5px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; 
+    gap: 30px;   
+}
+#header .container .nav-top .nav-phone{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+.nav-top .nav-phone a {
+    display: block;  
+    width: 29px; /* Set the desired width of the image */
+    height: 53px; /* Set the desired height of the image */
+    background: url('../images/iPhone.png') center/cover no-repeat;
+
+}
+.nav-top .nav-phone .number {
+    text-align: right;
+}
+.nav-top .nav-phone .number h6{
+    font-size: 18px;
+}
+.nav-top .nav-phone .number p{
+    font-size: 27px;
+}
+.nav-top .nav-links li {
+    display: inline-block;
+    margin-right: 55px;
+}
+.nav-top .nav-links li:last-child {
+    margin-right: 0px;
+}
+.nav-top .nav-links li >a {
+    font-size: 17px;
+    color: #000;
+    letter-spacing: 2px;
+}
+.nav-top .nav-links a:hover {
+    color: #fff;
+}
+#header .toggle-menu,
+#header .toggle-menu::before,
+#header .toggle-menu::after {
+    display: none;
+    background-color: #000;
+    position: absolute;
+    height: 6px;
+    width: 30px;
+    right: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0px 15px;
+}
+#header .toggle-menu::before{
+    content: '';
+    margin: -10px 0px;
+}
+#header .toggle-menu::after{
+    content: '';
+    margin: 10px 0px;
+}
+#main .home-banner{                    /* -------------- main ( home banner ) section -----------*/
+    padding: 160px 0px 140px 0px;
+    background: linear-gradient(100deg, #ffe001 0% 68%, #ebe9ac 68% 100%);
+}
+#main .home-banner::after {
+    content: "";
+    bottom: 165px;
+    left: 0;
+    z-index: 1;
+    width: 168px;
+    height: 298px;
+    position: absolute;
+    background: url('../images/spaghetti.png') center/contain no-repeat;
+    filter: drop-shadow(8px 28px 7px #333);
+}
+.home-banner .container {
+    position: relative;
+}
+.home-banner .banner-text {
+    align-items: center;
+    position: relative;
+    top: 50px;
+    left: 10px;
+    width: 45%;
+    text-align: center;
+    margin-bottom: 60px;
+    z-index: 2;
+}
+.home-banner .banner-text .banner-offer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.home-banner .banner-text h1 {
+    font-size: 57px;
+    margin-bottom: 30px;
+    line-height: 1;
+    font-family: 'gabelisa';
+    font-weight: 400;
+}
+.home-banner .banner-text h2 {
+    font-size: 90px;
+    margin-bottom: 25px;
+    line-height: 1;
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 400;
+}
+.home-banner .banner-text p {
+    font-size: 26px;
+    margin-bottom: 40px;
+}
+.home-banner .banner-text span {
+    display: inline-block;
+    width: 78%;
+    height: 2px;
+    background-color: #ccb301;
+    position: relative;
+    top: 0;
+    margin-bottom: 30px;
+}
+.home-banner .banner-text .banner-offer h3 {
+    font-size: 19px;
+    width: 145px;
+    position: relative;
+    top: 13px;
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 400;
+}
+.home-banner .banner-text .banner-offer p {
+    font-size: 56px;
+    margin-bottom: 0px;
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 400;
+}
+.home-banner .banner-image {
+    display: block;
+    position: absolute;
+    top: 36px;
+    right: 80px;
+    background: url('../images/plate.png') center/cover no-repeat;
+    filter: drop-shadow(20px 28px 23px #333);
+    width: 567px;
+    height: 567px;
+    z-index: 1;
+}
+.home-banner .pasta{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 45%;
+    background: url('../images/pasta.png') center/cover no-repeat;
+    width: 96px;
+    height: 96px;
+}
+.home-banner .leaf-1 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    background: url('../images/leaf-1.png') center/cover no-repeat;
+    width: 59px;
+    height: 96px;
+}
+.home-banner .leaf-2 {
+    display: block;
+    position: absolute;
+    bottom: -130px;
+    right: 30px;
+    background: url('../images/leaf-2.png') center/cover no-repeat;
+    width: 83px;
+    height: 109px;
+}
+.home-banner .tomato {
+    display: block;
+    position: absolute;
+    bottom: -140px;
+    right: 50%;
+    background: url('../images/tomato.png') center/cover no-repeat;
+    width: 81px;
+    height: 81px;
+}
+#main .food-order {                          /* ------------- food order section --------------- */
+    padding: 7% 0;
+    position: relative;
+}
+#main .food-order::before{
+    content: '';
+    display: block;
+    background-image: url('../images/rectangle-biege.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 410px;
+    left: 0;
+    height: 139px;
+    width: 100%;
+    z-index: -99999;
+}
+.food-order .disc{              
+    text-align: center;
+    margin-bottom: 80px;
+    margin-left: 115px;
+    margin-right: 115px;
+}
+.food-order .disc h2{                
+    font-size: 50px;
+    line-height: 1;
+    margin-bottom: 30px;
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 400;
+}
+.food-order .disc p{              
+    font-size: 16px; 
+    font-weight: 400;
+}
+.food-order .container .card-holder{              
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.container .card-holder .post-card {              
+    text-align: center;
+}
+.card-holder .post-card .caption{ 
+   padding: 50px 10px;
+}
+.card-holder .post-card .caption .btn {
+    border: none;
+    font-weight: 700;
+    font-size: 17px;
+}
+.card-holder .post-card .caption h3{  
+    font-size: 20px;            
+    margin-bottom: 25px;
+}
+.card-holder .post-card .caption p{   
+    font-size: 17px;           
+    margin-bottom: 35px;
+    font-weight: 400;
+}
+.card-holder .post-card img {
+    filter: drop-shadow(15px 15px 15px #333);
+}
+#main .food-events{                              /* ------------ fodd events sections ---------- */
+    padding: 5.5% 0;
+}
+.food-events .disc{              
+    text-align: center;
+    margin-bottom: 50px;
+    margin-left: 137px;
+    margin-right: 137px;
+}
+.food-events .disc h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.food-events .disc h2{                
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 30px;
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 400;
+}
+.food-events .disc p{              
+    font-size: 16px;
+    font-weight: 400; 
+}
+.slick-dots {                              /* ------------------ slider content ----------------- */
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    bottom: 0px;
+}
+.slick-dots li button{
+    text-indent: -9999px;
+    height: 15px;
+    width: 15px;
+    background-color: #d8d8d8;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+li.slick-active button{
+    background-color: #ffe001;
+}
+.food-events .gallery-slider {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 100px;
+    padding-top: 20px;
+}
+.slick-list{          /* -------- for shadow ---- */
+    overflow: visible;
+}
+.food-events .gallery-slider img {
+    transform: scale(0.9);
+    transition: all .6s ease;
+    filter: brightness(0.7);
+}
+.slick-slide.slick-active.slick-center img {
+    transform: scale(1.1);   
+    box-shadow: 15px 15px 54px rgba(12,13,12,0.67);
+    transition: all .6s ease;
+    filter: brightness(1);
+}                                         /* ------------------- slider content end ------------ */
+.food-events .gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 8.4%;
+    gap: 35px;
+}
+.food-events .gallery .col:first-child,
+.food-events .gallery .col .row  {
+    position: relative;
+}
+.food-events .gallery .col .caption {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    color: #fff;
+    width: 51%;
+}
+.food-events .gallery .col .caption p {
+    font-size: 26px;
+}
+.food-events .gallery .col .caption h3 {
+    font-size: 40px;
+}
+.food-events .gallery .col .row .caption {
+    top: 20px;
+    left: 20px;
+}
+.food-events .gallery .col .row .caption h3 {
+    font-size: 36px;
+}
+.food-events .gallery .col:last-child {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#main .reservation {                          /*---------------- reservation section ------------- */
+    padding: 6.67% 0;
+}
+#main .reservation .disc{
+   text-align: center;
+   margin-bottom: 6.67%;
+}
+#main .reservation .disc p {
+    font-size: 20px;
+}
+#main .reservation .disc h2 {
+    font-size: 50px;   
+    font-family: 'Fredericka the Great', cursive; 
+    font-weight: 400;
+}
+#main .reservation .booking{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+#main .reservation .booking .row{
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+input[type=text],
+input[type=email],
+input[type=submit] {
+    padding: 12px 15px;
+    width: 420px;
+    display: inline-block;
+    font-size: 17px;  
+    font-weight: 400;
+    line-height: 2;
+    color: #a4a4a4;
+    border: 1px solid #a4a4a4;
+}
+input[type=submit] {
+    background-color: #ffe001;
+    color: #000;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.75;
+}
+input[type=submit]:hover {
+    background-color: #ebe9ac;
+}
+#footer {                                        /* --------------- footer section ------------*/
+    display: block;
+    background-image: url(../images/footer-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    height: 582px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+#footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 65px;
+    gap: 90px
+}
+#footer .container .logo a {
+    display: block;  
+    width: 251px; /* Set the desired width of the image */
+    height: 63px; /* Set the desired height of the image */
+    background: url('../images/logo-footer.png') center/cover no-repeat;
+}
+#footer .container .disc,
+#footer .container .social-media {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+#footer .container .disc >p {
+    width: 40%;
+    line-height: 1.5;
+}
+#footer .container .disc .contact {
+    width: 33%;
+    position: relative;
+    top: 15px;
+}
+#footer .container .disc .contact p{
+    font-weight: 500; 
+    color: #fff;  
+}
+#footer .container .disc .contact .address,
+#footer .container .disc .contact .email  {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    margin-bottom: 20px;
+}
+#footer .container .disc .contact .address a {
+    display: block;
+    background: url('../images/location-icon.png') center/cover no-repeat;
+    width: 31px;
+    height: 35px;
+}
+#footer .container .disc .contact .email >a {
+    display: block; 
+    background: url('../images/email-icon.png') center/cover no-repeat; 
+    width: 31px;
+    height: 23px;  
+}
+#footer .container .disc .contact .email >a  ~ a{
+    background-image: none;
+}
+#footer .container .social-media .socials{
+    display: flex;
+    gap: 10px;
+    margin-right: 30px;
+}
+#footer .container .social-media .socials .insta{
+    display: block;
+    background: url('../images/insta.png') center/cover no-repeat; 
+    width: 29px;
+    height: 29px;     
+}
+#footer .container .social-media .socials .facebook{
+    display: block;
+    background: url('../images/facebook.png') center/cover no-repeat; 
+    width: 29px;
+    height: 29px; 
+}
+#footer .container .social-media .socials .twitter{
+    display: block;
+    background: url('../images/twitter.png') center/cover no-repeat; 
+    width: 29px;
+    height: 29px; 
+}
+#footer .container .social-media .socials .whatsapp{
+    display: block;
+    background: url('../images/whatsapp.png') center/cover no-repeat;
+    width: 29px;
+    height: 29px; 
+}
+#footer .container .social-media .socials .insta:hover,
+#footer .container .social-media .socials .facebook:hover,
+#footer .container .social-media .socials .twitter:hover,
+#footer .container .social-media .socials .whatsapp:hover {
+    transform: scale(1.2);  
+    transition: all .4s ease;
+}
+/* ------------------ tablet screens ----------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px){ 
+    .nav-top .nav-links li {
+        margin-right: 29px;
+    }
+    .home-banner .banner-text {
+        top: 50px;
+        left: 0px;
+        width: 100%;
+        z-index: 1;
+    }
+    .home-banner .banner-text h1{
+        font-size: 53px;
+    }
+    .home-banner .banner-text .banner-offer{
+        width: 100%;
+    }
+    #main .home-banner::after {
+        width: 13%;
+    }
+    .home-banner .banner-image {
+        display: none;
+    }
+    .home-banner .leaf-1{
+        top: 85px;
+    }
+    .home-banner .pasta {
+        top: 30px;
+        right: 20%;
+    }
+    .home-banner .leaf-2{
+        bottom: -170px;
+        right: 15%;
+    }
+    .home-banner .tomato{
+        left: 25%;
+        bottom: -100px;
+    }
+    .home-banner .banner-text span {
+        width: 46%;
+    }
+    #main .food-order::before {
+        display: none;
+    }
+    .food-order .disc {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .food-order .container .card-holder {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .food-order .container .card-holder .post-card {
+        display: flex;
+        align-items: center;
+        justify-content: inherit;
+    }
+    .food-events .disc {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .food-events .gallery {
+        gap: 30px;
+    }
+    .food-events .gallery .col:last-child{
+        gap: 20px;
+    }
+    .food-events .gallery .col .caption {
+        top: 40px;
+        left: 22px;
+    }
+    .food-events .gallery .col .caption {
+        width: 43%;
+    }
+    .food-events .gallery .col .caption p{
+        font-size: 17px;
+    }
+    .food-events .gallery .col .caption h3 {
+        font-size: 27px;
+    }
+    .food-events .gallery .col .row .caption h3 {
+        font-size: 22px;
+    }
+    input[type=text], 
+    input[type=email], 
+    input[type=submit] {
+        width: 350px;
+    }
+    #footer .container .social-media {
+        padding: 0px 0;
+    }
+    #footer .container {
+        align-items: center;
+        gap: 45px; 
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    #footer .container .disc{
+        gap: 30px;
+    }
+    #footer .container .disc >p {
+        width: 100%;
+        text-align: center;
+        font-size: 19px;
+    }
+    #footer .container .disc .contact{
+        width: 100%;
+    }
+    #footer .container .social-media {
+        flex-direction: column-reverse;
+        align-items: center; 
+        gap: 10px;
+    }
+    #footer .container .social-media p {
+        font-size: 18px;
+    }
+    #footer .container .social-media .socials {
+        margin-right: 0px;
+    }
+}
+/* ------------------ mobile screens ----------------------- */
+@media only screen and (max-width: 767px){
+    #header.active {
+        position: fixed;
+        background-color: #ffe001;
+    } 
+    #header .container .logo a {
+        width: 170px;
+    }
+    #header .container .nav-top {
+        padding: 0px 0px;
+    }
+    .nav-top .nav-phone .number h6 {
+        font-size: 13px;
+    }
+    .nav-top .nav-phone .number p {
+        font-size: 19px;
+    }
+    .nav-top .nav-phone a {
+        background-size: 90%;
+    }
+    .nav-top .nav-links {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        margin-top: 88px;
+        background-color: #dcdaa1;
+        visibility: hidden;
+        opacity: 0;
+        right: -100%;
+        transition: all 0.6s ease;
+    }
+    .nav-top .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-top .nav-links li{
+        margin: 0px 0;
+        border-bottom: 1px solid #ffe001;
+    }
+    .nav-top .nav-links li >a{
+        font-size: 23px;
+        display: block;
+        width: 100%;
+        padding: 15px 0px;
+    }
+    .nav-top .nav-links li >a:hover {
+        background-color: #ccb301;
+        transition: 0.4s ease;
+    }
+    #header .nav-top .custom {
+        visibility: visible;
+        opacity: 1;
+        right: 0%;
+        transition: all 0.5s ease;
+    }
+    #header .toggle-menu,
+    #header .toggle-menu::before,
+    #header .toggle-menu::after {
+        display: block;
+        height: 3px;
+        top: 87%;
+        right: 0;
+    }
+    #header .toggle-menu::before {
+        margin: -8px 0px;
+        top: 0;
+    }
+    #header .toggle-menu::after {
+        margin: 8px 0px;
+        top: 0;
+    }
+    .toggle-menu.active {
+        transform: rotate(45deg);
+    }
+    .toggle-menu.active::before {
+        opacity: 0;
+    }
+    .toggle-menu.active::after {
+        opacity: 1;
+        transform: translateY(-8px) rotate(90deg);
+    }
+    #main .home-banner::after {
+        display: none;
+    }
+    .home-banner .banner-text {
+        top: 50px;
+        left: 0px;
+        width: 100%;
+        z-index: 1;
+    }
+    .home-banner .banner-text h1{
+        font-size: 53px;
+    }
+    .home-banner .banner-text span {
+        width: 62%;
+    }
+    .home-banner .banner-image {
+        display: none;
+    }
+    .home-banner .leaf-1{
+        top: 85px;
+    }
+    .home-banner .pasta {
+        top: 167px;
+        right: 1%;
+    }
+    .home-banner .leaf-2{
+        bottom: -170px;
+        right: 10px;
+    }
+    .home-banner .tomato{
+        left: 20px;
+        bottom: -100px;
+    }
+    #main .food-order::before {
+        display: none;
+    }
+    .food-order .disc {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .food-order .disc h2{
+        font-size: 38px;
+    }
+    .food-order .disc p{
+        font-size: 14px;
+    }
+    .card-holder .post-card img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .food-order .container .card-holder {
+        flex-direction: column;
+    }
+    .card-holder .post-card .caption{
+        left: 0;
+    }
+    .card-holder .post-card img {     
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .food-events .disc {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .food-events .gallery-slider img {
+        transform: scale(1);
+        filter: brightness(1);
+        margin: 0 90px;
+        width: 452px;
+    }
+    .slick-slide.slick-active.slick-center img {
+        transform: scale(1);   
+        box-shadow: none;
+        filter: brightness(1);
+    } 
+    .slick-dots {
+        bottom: 40px;
+    }
+    .food-events .gallery {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    .food-events .gallery .col:last-child{
+        gap: 30px;
+    }
+    .food-events .gallery .col .caption {
+        top: 40px;
+        left: 22px;
+    }
+    .food-events .gallery .col .caption {
+        width: 43%;
+    }
+    .food-events .gallery .col .caption p {
+        font-size: 21px;
+    }
+    .food-events .gallery .col .caption h3 {
+        font-size: 35px;
+    }
+    .food-events .gallery .col .row .caption h3 {
+        font-size: 28px;
+    }
+    #main .reservation .booking .row {
+        flex-direction: column;
+    }
+    input[type=text],
+    input[type=email], 
+    input[type=submit] {
+        padding: 7px 15px;
+        font-size: 16px;
+        line-height: 1;
+        width: 370px;
+    }
+    #footer .container {
+        align-items: center;
+        gap: 45px; 
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    #footer .container .disc{
+        flex-direction: column;
+        gap: 30px;
+    }
+    #footer .container .disc >p {
+        width: 100%;
+        text-align: center;
+    }
+    #footer .container .disc .contact {   
+        width: 50%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #footer .container .social-media {
+        flex-direction: column-reverse;
+        align-items: center; 
+        gap: 10px;
+    }
+    #footer .container .social-media p {
+        font-size: 14px;
+    }
+    #footer .container .social-media .socials {
+        margin-right: 0px;
+    }
+    #footer .container .social-media {
+        padding: 0px 0px;
+    }
+}
+@media only screen and (max-width: 472px) {
+    .food-events .gallery .col .caption p {
+        font-size: 16px;
+    }
+    .food-events .gallery .col .caption h3 {
+        font-size: 27px;
+    }
+    .food-events .gallery .col .row .caption h3 {
+        font-size: 21px;
+    }
+}
+@media only screen and (max-width: 452px) {
+    .nav-top .nav-phone .number h6 {
+        font-size: 12.5px;
+    }
+    .nav-top .nav-phone .number p {
+        font-size: 18px;
+    }
+    .nav-top .nav-phone a {
+        background-size: 80%;
+    }
+    #header .container .nav-top .nav-phone {
+        gap: 3px;
+    }
+    .food-events .gallery-slider img {
+        transform: scale(1);
+        filter: brightness(1);
+        margin: 0 90px;
+        width: 375px;
+    }
+    .food-events .gallery .col .caption p {
+        font-size: 16px;
+    }
+    .food-events .gallery .col .caption h3 {
+        font-size: 27px;
+    }
+    .food-events .gallery .col .row .caption h3 {
+        font-size: 21px;
+    }
+    #main .reservation .booking .row {
+        flex-direction: column;
+    } 
+    #main .reservation .booking form, 
+    input[type=text],
+    input[type=email], 
+    input[type=submit] {
+        width: 100%;
+    }
+    #footer .container .disc .contact {
+        width: 100%;
+    }
+}
+
